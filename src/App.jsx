@@ -1,7 +1,8 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, NavLink} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import './App.css';
 import About from './components/About.jsx';
 import Home from './components/Home.jsx';
@@ -13,6 +14,22 @@ function App () {
 
   return (
     <div className="App">
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+          <li>
+            <NavLink to="/support">Support</NavLink>
+          </li>
+          <li>
+            <NavLink to="/labs">Labs</NavLink>
+          </li>
+        </ul>
+      </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/support" element={<Support />} />

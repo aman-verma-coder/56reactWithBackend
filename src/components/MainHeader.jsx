@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-function Home() {
+function MainHeader() {
     return(
         <div>
-            Home
+            <Outlet/>
         </div>
     )
 }
-export default Home;
+export default MainHeader;

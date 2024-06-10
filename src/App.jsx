@@ -8,6 +8,7 @@ import About from './components/About.jsx';
 import Home from './components/Home.jsx';
 import Labs from './components/Labs.jsx';
 import Support from './components/Support.jsx';
+import MainHeader from './components/MainHeader.jsx';
 
 function App () {
   // const [count, setCount] = useState(0)
@@ -31,11 +32,13 @@ function App () {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/support" element={<Support />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/labs" element={<Labs />} />
-        <Route path="*" element={<div>Page Not Found</div>} />
+        <Route path="/" element={<MainHeader />}>
+          <Route index path="/" element={<Home />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/labs" element={<Labs />} />
+          <Route path="*" element={<div>Page Not Found</div>} />
+        </Route>
       </Routes>
     </div>
   );

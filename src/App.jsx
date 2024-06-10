@@ -3,6 +3,10 @@
 // import viteLogo from '/vite.svg'
 import {Routes, Route} from 'react-router-dom';
 import './App.css';
+import About from './components/About.jsx';
+import Home from './components/Home.jsx';
+import Labs from './components/Labs.jsx';
+import Support from './components/Support.jsx';
 
 function App () {
   // const [count, setCount] = useState(0)
@@ -10,10 +14,10 @@ function App () {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/support" element={<div>Support Page</div>} />
-        <Route path="/about" element={<div>About Page</div>} />
-        <Route path="/labs" element={<div>Labs Page</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/labs" element={<Labs />} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </div>
